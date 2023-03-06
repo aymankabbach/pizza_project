@@ -16,5 +16,10 @@ namespace Pizza_Project
         {
             InitializeComponent();
         }
+
+        private void labTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
