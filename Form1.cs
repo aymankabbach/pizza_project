@@ -270,5 +270,46 @@ namespace Pizza_Project
             labTopRes.Text = update_toppings();
             labTprice.Text = get_price().ToString();
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            rdBtnSizeSmall.Enabled = true;
+            rdBtnSizeMedium.Enabled = true;
+            rdBtnSizeLarge.Enabled = true;
+            rdBtnCrustThin.Enabled = true;
+            rdBtnCrustThink.Enabled = true;
+            rdBtnEatIn.Enabled = true;
+            rdBtnTakeOut.Enabled = true;
+            chkBoxExtCheese.Enabled = true;
+            chkBoxTomatoes.Enabled = true;
+            chkBoxOnion.Enabled = true;
+            chkBoxOlives.Enabled = true;
+            chkBoxMushrooms.Enabled = true;
+            chkBoxGrnPeppers.Enabled = true;
+            btnOrder.Enabled = true;
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("please , confirm", "Confirm",MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                rdBtnSizeSmall.Enabled = false;
+                rdBtnSizeMedium.Enabled = false;
+                rdBtnSizeLarge.Enabled = false;
+                rdBtnCrustThin.Enabled = false;
+                rdBtnCrustThink.Enabled = false;
+                rdBtnEatIn.Enabled = false;
+                rdBtnTakeOut.Enabled = false;
+                chkBoxExtCheese.Enabled = false;
+                chkBoxTomatoes.Enabled = false;
+                chkBoxOnion.Enabled = false;
+                chkBoxOlives.Enabled = false;
+                chkBoxMushrooms.Enabled = false;
+                chkBoxGrnPeppers.Enabled = false;
+                btnOrder.Enabled = false;
+            }
+                
+        }
     }
 }
